@@ -8,7 +8,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class FireBaseManager{
     private final FirebaseAuth auth;
     private FirebaseUser user;
-    FireBaseManager(){
+    public FireBaseManager(){
         auth = FirebaseAuth.getInstance();
     }
 
@@ -28,6 +28,8 @@ public class FireBaseManager{
 
     public boolean signUpWithEmailAndPassword(String email, String password){
         final boolean[] result = {false};
+        //TODO проверка почты и пароля. Проверка на существование пользователя
+        //TODO отправка писем на почту(https://support.google.com/firebase/answer/7000714#)
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener((task) -> {
             if(task.isSuccessful()){
                 user = auth.getCurrentUser();

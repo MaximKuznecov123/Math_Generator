@@ -1,5 +1,6 @@
-package com.example.myapplication.Activities.MainActivity;
+package com.example.myapplication.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -7,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.MainActivityBinding;
 
@@ -21,14 +21,21 @@ public class MainActivity extends AppCompatActivity {
 
         binding = MainActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        ViewCompat.setOnApplyWindowInsetsListener(binding.fragmentContainerView, (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.main, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        binding.enter.setOnClickListener(v -> {
+            Intent i;
+            if (false) {//TODO проверка вошел в кабинет или нет
+                i = new Intent(this, SelectModeActivity.class);
+            } else {
+                i = new Intent(this, AuthActivity.class);
+            }
+            startActivity(i);
+        });
     }
-    //TODO Вызывается из фрагментов, поэтому желательно сделать другой способ их смены  ̶и̶л̶и̶ ̶п̶р̶о̶с̶т̶о̶ ̶з̶а̶б̶и̶т̶ь̶.
-    public void changeFragment(Fragment fragment){
-        getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainerView.getId(), fragment).commit();
-    }
+
 }
