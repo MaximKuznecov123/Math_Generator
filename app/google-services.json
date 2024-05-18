@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050606480546",
+    "project_id": "math-generator-ecf9f",
+    "storage_bucket": "math-generator-ecf9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050606480546:android:ec823046a11ff7092d3bfb",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiceLSvj2MGFRUu4kQDyNOKzxNVO0rm5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
