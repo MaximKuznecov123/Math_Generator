@@ -47,13 +47,14 @@ public class AuthActivity extends AppCompatActivity {
     private void changeActivityMode() {
         switch (mode) {
             case 1://регистрация
-
+            binding.auth.setOnClickListener(v -> signUp);
+            
                 break;
             case 2://вход
-
+            binding.auth.setOnClickListener(v -> signIn);
                 break;
             case 3://сброс пароля
-
+            
                 break;
         }
     }
@@ -71,6 +72,10 @@ public class AuthActivity extends AppCompatActivity {
         String password = String.valueOf(binding.password.getText());
         FireBaseManager fireBaseManager = new FireBaseManager();
         fireBaseManager.signUpWithEmailAndPassword(email, password);
+    }
+    
+    private void resetPassword() {
+        String email 
     }
 
 }
