@@ -4,10 +4,19 @@
     <string name="resume">Продолжить</string>
     <string name="startGame">Начать игру</string>
     <string name="complete">Завершить</string>
+
     <string name="signUp">Зарегистрироваться</string>
     <string name="signIn">Войти</string>
     <string name="email">Адрес электронной почты</string>
     <string name="password">Пароль</string>
     <string name="username">Имя</string>
-    <string name="forgotPassword">Забыли пароль?</string>
+    <string name="reset_password">Сбросить пароль</string>
+
+    <!-- Результат запроса в firebase -->
+    <string name="email_not_correct_error">*Пароль должен содержать не менее 8-ми символов и содержать как минимум 1 заглавную, строчную буквы и 1 цифру</string>
+    <string name="password_not_correct_error">*Некорректный адрес почты</string>
+    <string name="sign_in_error">Неверный email или пароль</string>
+    <string name="success_auth">Успешная аутентификация</string>
+    <string name="unsigned_error">Что-то пошло не так</string>
+    <string name="email_already_in_use">Указанная почта уже используется</string>
 </resources>

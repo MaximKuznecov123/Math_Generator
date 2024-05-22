@@ -52,7 +52,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/password"
-            android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
             android:inputType="textPassword" />
     </LinearLayout>
@@ -66,17 +65,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.469" />
 
     <TextView
         android:id="@+id/forgotPassword"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="@string/forgotPassword"
+        android:layout_marginTop="8dp"
+        android:text="@string/reset_password"
         android:textAlignment="center"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/auth"
-        app:layout_constraintStart_toStartOf="@+id/auth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth" />
 </androidx.constraintlayout.widget.ConstraintLayout>
