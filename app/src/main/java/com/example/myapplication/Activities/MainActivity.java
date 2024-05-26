@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.myapplication.databinding.MainActivityBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private MainActivityBinding binding;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.enter.setOnClickListener(v -> {
             Intent i;
-            if (false) {//TODO проверка вошел в кабинет или нет
+            if (FirebaseAuth.getInstance().getCurrentUser() != null) {// проверка вошёл в кабинет или нет
                 i = new Intent(this, SelectModeActivity.class);
             } else {
                 i = new Intent(this, AuthActivity.class);

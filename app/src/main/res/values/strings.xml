@@ -13,10 +13,12 @@
     <string name="reset_password">Сбросить пароль</string>
 
     <!-- Результат запроса в firebase -->
-    <string name="email_not_correct_error">*Пароль должен содержать не менее 8-ми символов и содержать как минимум 1 заглавную, строчную буквы и 1 цифру</string>
-    <string name="password_not_correct_error">*Некорректный адрес почты</string>
+    <string name="email_not_correct_error">Некорректный адрес почты. Можно использовать латинские буквы, цифры, точки</string>
+    <string name="password_not_correct_error">Пароль должен содержать от 8-ми до 20-ти символов и как минимум 1 заглавную, строчную латинские буквы и 1 цифру. Допустимы только латинские буквы и цифры</string>
     <string name="sign_in_error">Неверный email или пароль</string>
-    <string name="success_auth">Успешная аутентификация</string>
-    <string name="unsigned_error">Что-то пошло не так</string>
-    <string name="email_already_in_use">Указанная почта уже используется</string>
+    <string name="success_auth">Успешная аутентификация!</string>
+    <string name="unknown_error">Что-то пошло не так...</string>
+    <string name="email_already_in_use_error">Указанная почта уже используется</string>
+    <string name="name_must_be_filled_error">Введите имя</string>
+    <string name="password_reset_meil_sent">На вашу почту направлено письмо для сброса пароля</string>
 </resources>
